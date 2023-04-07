@@ -10,19 +10,22 @@ public class GerenciadorAeronaves {
 
     public void cadastrarAeronave(Aeronave aeronav) {
             aeronaves.add(aeronav);
-        //inserir elemento na colecao de aeronaves
     }
-    public Aeronave buscarPorCodigo(String cod){
-        return //Aeronave desse codigo;
-        //obter um elemento qualquer e obter o tamanho da coleção, junto com uma repetição while.
+    
+        public Aeronave buscarPorCodigoAeronav(String cod){
+            for(int i=0;i<aeronaves.size();i++){
+                Aeronave a = aeronaves.get(i);
+                if(a.getCodigo().equals(cod)){
+                    return a;
+                }
+            }
+            return null;
         
     }
     public ArrayList<Aeronave> listarTodas() {
-        for(int i=0;i<ArrayList.size;i++){
-            return Aeronave[i];
-        }
         
-        
-        
+        return aeronaves;
+ 
+
     }
 }

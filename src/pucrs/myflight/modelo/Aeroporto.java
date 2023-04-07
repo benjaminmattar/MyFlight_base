@@ -22,4 +22,8 @@ public class Aeroporto {
 	public Geo getLocal() {
 		return loc;
 	}
+
+	public String toString(){
+		return "Aeroporto " + codigo + ", nome = " + nome + ", loc = " + loc;
+	}
 }
