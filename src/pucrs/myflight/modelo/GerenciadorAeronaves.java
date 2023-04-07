@@ -8,8 +8,8 @@ public class GerenciadorAeronaves {
         aeronaves = new ArrayList<>();
     }
 
-    public void cadastrarAeronave(Aeronave aeronav) {
-            aeronaves.add(aeronav);
+    public void adicionar(Aeronave aviao) {
+            aeronaves.add(aviao);
     }
     
         public Aeronave buscarPorCodigoAeronav(String cod){

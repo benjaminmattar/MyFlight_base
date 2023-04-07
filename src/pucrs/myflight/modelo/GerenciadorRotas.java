@@ -8,16 +8,16 @@ public class GerenciadorRotas {
         rotas = new ArrayList<>();
     }
 
-    public void cadastrarAeronave(Rota rot) {
+    public void adicionar(Rota rot) {
             rotas.add(rot);
     }
     
-        public Rota buscarPorOrigemRota(String cod){
+        public Rota buscarPorOrigemRota(Aeroporto orig){
             for(int i=0;i<rotas.size();i++){
                 Rota a = rotas.get(i);
-                if(a.getOrigem().equals(cod)){
+                if(a.getOrigem().equals(orig)){
                     return a;
-                }
+                }//ver oq tem q retornar direitinho
             }
             return null;
         

@@ -47,9 +47,9 @@ public class App {
 
 		//  Voo v1 = new Voo(r2, hoje, agora); COMO USAR O LOCAL DATE?
 		
-		gerenciaAeronave.cadastrarAeronave(a);
-		gerenciaAeronave.cadastrarAeronave(b);
-		gerenciaAeronave.cadastrarAeronave(c);
+		gerenciaAeronave.adicionar(a);
+		gerenciaAeronave.adicionar(b);
+		gerenciaAeronave.adicionar(c);
 		
 		System.out.print(gerenciaAeronave.listarTodas().toString());
 		// System.out.println(a.toString());

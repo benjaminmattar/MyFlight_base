@@ -11,7 +11,7 @@ public class GerenciadorCias {
 	public void adicionar(CiaAerea cia) {
 		empresas.add(cia);
 	}
-	public CiaAerea buscarPorCodigo(String cod){
+	public CiaAerea buscarCodigo(String cod){
 		for(int i=0;i<empresas.size();i++){
 			CiaAerea a = empresas.get(i);
 			if(a.getCodigo().equals(cod)){
@@ -20,4 +20,20 @@ public class GerenciadorCias {
 		}
 		return null;
 	}
+	public CiaAerea buscarNome(String cod){
+		for(int i=0;i<empresas.size();i++){
+			CiaAerea a = empresas.get(i);
+			if(a.getNome().equals(cod)){
+				return a;
+			}
+		}
+		return null;
+	}
+	public ArrayList<CiaAerea> listarTodas() {
+        
+        return empresas;
+ 
+
+    }
+
 }

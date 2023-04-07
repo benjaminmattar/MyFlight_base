@@ -8,7 +8,7 @@ public class GerenciadorAeroportos {
         aeroportos = new ArrayList<>();
     }
 
-    public void cadastrarAeronave(Aeroporto aeroport) {
+    public void adicionar(Aeroporto aeroport) {
             aeroportos.add(aeroport);
     }
     
