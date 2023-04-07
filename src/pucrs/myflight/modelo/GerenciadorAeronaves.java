@@ -1,12 +1,15 @@
 package pucrs.myflight.modelo;
+import java.util.ArrayList;
 
 public class GerenciadorAeronaves {
+    private ArrayList<Aeronave> aeronaves;
+	
     public GerenciadorAeronaves(){
-        
+        aeronaves = new ArrayList<>();
     }
 
-    public void cadastrarAeronave() {
-
+    public void cadastrarAeronave(Aeronave aeronav) {
+            aeronaves.add(aeronav);
         //inserir elemento na colecao de aeronaves
     }
     public Aeronave buscarPorCodigo(String cod){
