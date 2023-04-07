@@ -35,7 +35,7 @@ public class App {
 		Rota r2 = new Rota(e, go, g, b);
 		// Voo v1 = new Voo(r2, hoje, agora); COMO USAR O LOCAL DATE?
 		//Marcola tudo 3
-		
+		//beza 
 
 
 		System.out.println(a.toString());
