@@ -26,8 +26,8 @@ public class App {
 		// Duration agora = Duration
 		GerenciadorAeronaves gerenciaAeronave = new GerenciadorAeronaves();
 		
-		Geo lat1 = new Geo(-29.9939,-51.1711);
-		Geo lat2 = new Geo(-23.4356,-46.4731);
+		Geo latlong1 = new Geo(-29.9939,-51.1711);
+		Geo latlong2 = new Geo(-23.4356,-46.4731);
 		
 		Aeronave a = new Aeronave("733", "Boeing 737-300");
 		Aeronave b = new Aeronave("12G", "Airbus Industrie A380");
@@ -37,15 +37,24 @@ public class App {
 		CiaAerea e = new CiaAerea("G3", "Gol Linhas Aéreas SA");
 		CiaAerea f = new CiaAerea("TP", "TAP Portugal");
 		
-		Aeroporto g = new Aeroporto("POA", "Salgado Filho Intl Apt", lat1);
-		Aeroporto go = new Aeroporto("GRU", "São Paulo Guarulhos Intl Apt", lat2);
+		Aeroporto g = new Aeroporto("POA", "Salgado Filho Intl Apt", latlong1);
+		Aeroporto go = new Aeroporto("GRU", "São Paulo Guarulhos Intl Apt", latlong2);
+
+		Geo.distGeoDadosArmaz(latlong1);
 
 		Rota r1 = new Rota(f, g, go, a);
 		Rota r2 = new Rota(e, go, g, b);
 
+		LocalDateTime datahora = LocalDateTime.of(2003, 5, 27, 15, 30);
+		Duration duracao = Duration.ofMinutes(120); // 2 horas
+
+		Voo voo1 = new Voo(r2, duracao);
+		Voo voo2 = new Voo(r2, datahora, duracao);
+		System.out.println(voo1.toString());
+		System.out.println(voo2.toString());
 
 
-		//  Voo v1 = new Voo(r2, hoje, agora); COMO USAR O LOCAL DATE?
+		Voo v1 = new Voo(r2, datahora, duracao); 
 		
 		gerenciaAeronave.adicionar(a);
 		gerenciaAeronave.adicionar(b);
