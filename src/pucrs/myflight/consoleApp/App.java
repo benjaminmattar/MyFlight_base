@@ -61,6 +61,8 @@ public class App {
 		gerenciaAeronave.adicionar(aeronaveC);
 		
 		System.out.print(gerenciaAeronave.listarTodas().toString());
+
+		System.out.println("Total de empresas: "+CiaAerea.getTotalCias());
 		// System.out.println(a.toString());
 		// System.out.println(b.toString());
 		// System.out.println(c.toString());
