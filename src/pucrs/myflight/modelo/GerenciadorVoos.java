@@ -17,7 +17,7 @@ public class GerenciadorVoos {
         public Voo buscarData(LocalDate data){
             for(int i=0;i<voos.size();i++){
                 Voo a = voos.get(i);
-                if(a.getDatahora().equals(data)){
+                if(a.getDatahora().toLocalDate().equals(data)){
                     return a;
                 }//ver oq tem q retornar direitinho
             }

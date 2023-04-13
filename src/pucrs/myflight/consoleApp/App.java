@@ -40,7 +40,11 @@ public class App {
 		Aeroporto aeroportoA = new Aeroporto("POA", "Salgado Filho Intl Apt", latlong1);
 		Aeroporto aeroportoB = new Aeroporto("GRU", "São Paulo Guarulhos Intl Apt", latlong2);
 
-		Geo.distGeoDadosArmaz(latlong1);
+		System.out.println(latlong1.distancia(latlong2));
+
+		System.out.println(Geo.distancia(latlong1, latlong2));
+
+		System.out.println();
 
 		Rota rota1 = new Rota(ciaAereaA,aeroportoA,aeroportoB,aeronaveA);
 		Rota rota2 = new Rota(ciaAereaB, aeroportoB, aeroportoA, aeronaveC);
