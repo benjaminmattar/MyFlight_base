@@ -23,9 +23,12 @@ public class GerenciadorAeronaves {
         
     }
     public ArrayList<Aeronave> listarTodas() {
-        
-        return aeronaves;
- 
-
-    }
+        ArrayList<Aeronave> listaaux = new ArrayList<>();
+            for (Aeronave aero : aeronaves) {
+                listaaux.add(aero);
+            }
+            return listaaux;
+    }    
 }
+       
+        
