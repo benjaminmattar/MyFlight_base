@@ -26,7 +26,11 @@ public class GerenciadorVoos {
     }
     public ArrayList<Voo> listarTodas() {
         
-        return voos;
+        ArrayList<Voo> listaaux = new ArrayList<>();
+            for (Voo vo : voos) {
+                listaaux.add(vo);
+            }
+            return listaaux;
  
 
     }

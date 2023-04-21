@@ -24,8 +24,11 @@ public class GerenciadorAeroportos {
     }
     public ArrayList<Aeroporto> listarTodas() {
         
-        return aeroportos;
- 
+        ArrayList<Aeroporto> listaaux = new ArrayList<>();
+            for (Aeroporto aero : aeroportos) {
+                listaaux.add(aero);
+            }
+            return listaaux;
             //REFAZER TODOS OS LISTAR
     }
 }

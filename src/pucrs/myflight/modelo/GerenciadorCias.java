@@ -31,7 +31,11 @@ public class GerenciadorCias {
 	}
 	public ArrayList<CiaAerea> listarTodas() {
         
-        return empresas;
+        ArrayList<CiaAerea> listaaux = new ArrayList<>();
+            for (CiaAerea emp : empresas) {
+                listaaux.add(emp);
+            }
+            return listaaux;
  
 
     }

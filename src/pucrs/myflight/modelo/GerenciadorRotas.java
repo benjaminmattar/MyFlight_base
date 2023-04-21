@@ -24,7 +24,11 @@ public class GerenciadorRotas {
     }
     public ArrayList<Rota> listarTodas() {
         
-        return rotas;
+        ArrayList<Rota> listaaux = new ArrayList<>();
+            for (Rota rot : rotas) {
+                listaaux.add(rot);
+            }
+            return listaaux;
  
 
     }
