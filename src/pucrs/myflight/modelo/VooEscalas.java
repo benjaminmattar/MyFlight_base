@@ -24,4 +24,19 @@ public class VooEscalas extends Voo{
     public String toString() {
         return super.toString() + " -> " + rotaFinal;
     }
+
+
+    @Override
+    public Rota getRota() {
+        return rota;
+    }
+
+    @Override
+    public Duration getDuracao() {
+        }
+
+
+    public ArrayList<Rota> getRotas(){
+        
+    } 
 }
