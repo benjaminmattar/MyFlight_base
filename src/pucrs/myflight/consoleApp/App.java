@@ -5,6 +5,8 @@ import pucrs.myflight.modelo.Aeroporto;
 import pucrs.myflight.modelo.CiaAerea;
 import pucrs.myflight.modelo.Geo;
 import pucrs.myflight.modelo.GerenciadorAeronaves;
+import pucrs.myflight.modelo.LeituraDados;
+import pucrs.myflight.modelo.LeituraDadosAirlines;
 import pucrs.myflight.modelo.Rota;
 import pucrs.myflight.modelo.Voo;
 
@@ -67,10 +69,13 @@ public class App {
 		System.out.print(gerenciaAeronave.listarTodas().toString());
 
 		System.out.println("Total de empresas: "+CiaAerea.getTotalCias());
-		// System.out.println(a.toString());
-		// System.out.println(b.toString());
-		// System.out.println(c.toString());
-
+		System.out.println(a.toString());
+		System.out.println(b.toString());
+		System.out.println(c.toString());
+		
+		LeituraDadosAirlines a = new LeituraDadosAirlines();
+		a.leArquivo("airlines.dat");	//apenas para este arquivo por enquanto..
+		a.filtraCodigo("D7");
 
 	}
 
