@@ -11,9 +11,12 @@ import java.time.Duration;
 public class VooEscalas extends Voo{
     private Rota rotaFinal;
 
+
+
     public VooEscalas(Rota rota, Rota rotaFinal, LocalDateTime datahora, Duration duracao) {
        super(rota, datahora, duracao);
        this.rotaFinal=rotaFinal;
+     
     }
 
     public Rota getRotaFinal() { 
@@ -28,11 +31,12 @@ public class VooEscalas extends Voo{
 
     @Override
     public Rota getRota() {
-        return rota;
+        return rotaFinal;
     }
 
     @Override
     public Duration getDuracao() {
+        return 
         }
 
 
