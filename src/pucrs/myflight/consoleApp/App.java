@@ -6,11 +6,14 @@ import pucrs.myflight.modelo.CiaAerea;
 import pucrs.myflight.modelo.Geo;
 import pucrs.myflight.modelo.GerenciadorAeronaves;
 import pucrs.myflight.modelo.LeitorDadosAirPort;
+import pucrs.myflight.modelo.LeitorDadosEquipment;
 import pucrs.myflight.modelo.LeituraDadosAirlines;
+import pucrs.myflight.modelo.LeituraDadosCountries;
 import pucrs.myflight.modelo.Rota;
 import pucrs.myflight.modelo.Voo;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Duration;
@@ -25,18 +28,18 @@ public class App {
 		
 		
 
-		// Duration agora = Duration
-		// GerenciadorAeronaves gerenciaAeronave = new GerenciadorAeronaves();
+		//  Duration agora = Duration
+		//  GerenciadorAeronaves gerenciaAeronave = new GerenciadorAeronaves();
 		
-		// Geo latlong1 = new Geo(-29.9939,-51.1711);
-		// Geo latlong2 = new Geo(-23.4356,-46.4731);
+		//  Geo latlong1 = new Geo(-29.9939,-51.1711);
+		//  Geo latlong2 = new Geo(-23.4356,-46.4731);
 		
-		// Aeronave aeronaveA = new Aeronave("733", "Boeing 737-300");
-		// Aeronave aeronaveB = new Aeronave("12G", "Airbus Industrie A380");
-		// Aeronave aeronaveC = new Aeronave("380", "Boeing 123-456");
+		//  Aeronave aeronaveA = new Aeronave("733", "Boeing 737-300");
+		//  Aeronave aeronaveB = new Aeronave("12G", "Airbus Industrie A380");
+		//  Aeronave aeronaveC = new Aeronave("380", "Boeing 123-456");
 		
-		// CiaAerea ciaAereaA = new CiaAerea("JJ", "LATAM Linhas Aéreas");
-		// CiaAerea ciaAereaB  = new CiaAerea("G3", "Gol Linhas Aéreas SA");
+		//  CiaAerea ciaAereaA = new CiaAerea("JJ", "LATAM Linhas Aéreas");
+		//  CiaAerea ciaAereaB  = new CiaAerea("G3", "Gol Linhas Aéreas SA");
 		// CiaAerea ciaAereaC = new CiaAerea("TP", "TAP Portugal");
 		
 		// Aeroporto aeroportoA = new Aeroporto("POA", "Salgado Filho Intl Apt", latlong1);
@@ -77,10 +80,30 @@ public class App {
 		// a.leArquivo("airlines.dat");	//apenas para este arquivo por enquanto..
 		// a.filtraCodigo("D7");
 
-		LeitorDadosAirPort air = new LeitorDadosAirPort();
-		air.leArquivo("airports.dat");
-		air.filtrarCodigo("airport", "AAA"); 
-	}
+		// LeitorDadosAirPort air = new LeitorDadosAirPort();
+		// air.leArquivo("airports.dat");
+		// air.filtrarCodigo("airport", "AAA"); 
+
+		// LeituraDadosCountries countries = new LeituraDadosCountries();
+		// countries.lerArquivo("countries.dat");
+		// countries.filtrarCodigo("BR", "Brazil"); // dando erro...
+
+		String nomeArquivo = "equipment.dat"; // Nome do arquivo a ser lido
+		LeitorDadosEquipment leitor = new LeitorDadosEquipment();
+        List<String[]> linhas = leitor.lerArquivo(nomeArquivo);
+		for (String[] campos : linhas) {
+            String id = campos[0];
+            String descricao = campos[1];
+            String capacidade = campos[2];
+
+            System.out.println("ID: " + id);
+            System.out.println("Descrição: " + descricao);
+            System.out.println("Capacidade: " + capacidade);
+            System.out.println();
+        }
+    }
+}
+	
 
 	
-}
+

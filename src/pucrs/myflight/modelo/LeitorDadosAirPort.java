@@ -15,7 +15,7 @@ public class LeitorDadosAirPort {
     }
 
     public void leArquivo(String filename) {
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filename))){
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filename))) {
             String linha;
             while ((linha = bufferedReader.readLine()) != null) {
                 String[] campos = linha.split(";");
@@ -41,16 +41,15 @@ public class LeitorDadosAirPort {
         }
     }
 
-        public static void filtrarPorCodigo(List<String> codigos, String codigoFiltro) {
+    public static void filtrarPorCodigo(List<String> codigos, String codigoFiltro) {
         List<String> codigosFiltrados = new ArrayList<>();
-        
+
         for (String codigo : codigos) {
             if (codigo.equals(codigoFiltro)) {
                 codigosFiltrados.add(codigo);
             }
         }
     }
-
 
     @Override
     public String toString() {
