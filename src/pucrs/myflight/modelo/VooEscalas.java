@@ -36,7 +36,7 @@ public class VooEscalas extends Voo{
 
     @Override
     public Duration getDuracao() {
-        return 
+
         }
 
 

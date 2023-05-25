@@ -12,6 +12,7 @@ import pucrs.myflight.modelo.LeituraDadosCountries;
 import pucrs.myflight.modelo.Rota;
 import pucrs.myflight.modelo.Voo;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDate;
@@ -23,8 +24,8 @@ import java.time.format.DateTimeFormatter;
 public class App {
 
 	public static void main(String[] args) {
-		System.out.println("\nMyFlight project...");
-		LocalDate hoje = LocalDate.now();
+		// System.out.println("\nMyFlight project...");
+		// LocalDate hoje = LocalDate.now();
 		
 		
 
@@ -76,31 +77,36 @@ public class App {
 		// System.out.println(b.toString());
 		// System.out.println(c.toString());
 		
-		// LeituraDadosAirlines a = new LeituraDadosAirlines();
-		// a.leArquivo("airlines.dat");	//apenas para este arquivo por enquanto..
-		// a.filtraCodigo("D7");
-
+		
+		//  LeituraDadosAirlines a = new LeituraDadosAirlines();
+		//  a.leArquivo("airlines.dat");	
+		//  a.filtraCodigo("D7");
+		//  System.out.println(a.toString());
+		
 		// LeitorDadosAirPort air = new LeitorDadosAirPort();
 		// air.leArquivo("airports.dat");
 		// air.filtrarCodigo("airport", "AAA"); 
 
-		// LeituraDadosCountries countries = new LeituraDadosCountries();
-		// countries.lerArquivo("countries.dat");
-		// countries.filtrarCodigo("BR", "Brazil"); // dando erro...
+		
+		LeituraDadosCountries countries = new LeituraDadosCountries();
+		countries.leArquivo("countries.dat");
+		countries.filtrarCodigo("BR", "Brazil"); // dando erro...
+		// System.out.println(countries.toString());
 
-		String nomeArquivo = "equipment.dat"; // Nome do arquivo a ser lido
-		LeitorDadosEquipment leitor = new LeitorDadosEquipment();
-        List<String[]> linhas = leitor.lerArquivo(nomeArquivo);
-		for (String[] campos : linhas) {
-            String id = campos[0];
-            String descricao = campos[1];
-            String capacidade = campos[2];
+		
+		// String nomeArquivo = "equipment.dat"; 
+		// LeitorDadosEquipment leitor = new LeitorDadosEquipment();
+        // List<String[]> linhas = leitor.lerArquivo(nomeArquivo);
+		// for (String[] campos : linhas) {
+        //     String id = campos[0];
+        //     String descricao = campos[1];
+        //     String capacidade = campos[2];
 
-            System.out.println("ID: " + id);
-            System.out.println("Descrição: " + descricao);
-            System.out.println("Capacidade: " + capacidade);
-            System.out.println();
-        }
+        //     System.out.println("ID: " + id);
+        //     System.out.println("Descrição: " + descricao);
+        //     System.out.println("Capacidade: " + capacidade);
+        //     System.out.println();
+        // }
     }
 }
 	

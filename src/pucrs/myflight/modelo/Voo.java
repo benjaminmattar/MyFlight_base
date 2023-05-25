@@ -24,7 +24,7 @@ public abstract class Voo {
 		this.duracao = duracao;
 		this.datahora = LocalDateTime.of(2016, 8, 12, 12, 00);
 	}
-
+	
 	
 	public abstract Rota getRota();
 	

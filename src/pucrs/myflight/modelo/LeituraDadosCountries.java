@@ -1,7 +1,9 @@
 package pucrs.myflight.modelo;
 
+import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,24 +15,25 @@ public class LeituraDadosCountries {
     private ArrayList<String> countries;
 
     public LeituraDadosCountries() {
-        countries = new ArrayList<>();
+        countries = new ArrayList<String>();
     }
 
-    public void lerArquivo(String arquivo) {
-        try (DataInputStream dis = new DataInputStream(new FileInputStream(arquivo))) {
+    public void leArquivo(String filename) {
+         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
             String linha;
-            while ((linha = dis.readLine()) != null) {
-                if (linha.startsWith("#")) {
-                    String[] partes = linha.substring(1).split(";");
-                    if (partes.length == 2) {
-                        String code = partes[0].trim();
-                        String name = partes[1].trim();
-                        countries.add(code);
-                    }
+            while ((linha = reader.readLine()) != null) {
+                String[] parts = linha.split(";");
+                if (parts.length == 2) {
+                    String codigo = parts[0].trim();
+                    String nome = parts[1].trim();
+                    countries.add(codigo + " - " + nome);
+                    System.out.print("Sigla: " + codigo);
+                    System.out.print(" || País: " + nome+"\n");
                 }
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+          } 
+             catch (IOException e) {
+            System.out.println("Erro ao ler o arquivo: " + e.getMessage());
         }
     }
     
